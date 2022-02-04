@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="search-form">
+        <div class="row top-search">
+          <div class="col-9 left-align">
+            <input
+              type="text"
+              class="form-control"
+              id="current-city"
+              placeholder="Search for a city"
+              autocomplete="off"
+            />
+          </div>
+          <div class="col-3 right-align">
+            <input type="submit" value="Search" class="btn btn-primary" />
+          </div>
+        </div>
+      </form>
+      <form id="current-location">
+        <div class="row current-location">
+          <div class="col-md-3 offset-md-9">
+            <p class="or">or</p>
+          <input type="submit" value="Current location" class="btn btn-primary" />
+        </div>
+        </div>
+      </form>
+
+      <div class="row card-container" id="current-weather-card">
+        <div class="col">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h1 class="card-title" id="current-city-text"></h1>
+              <h4 class="current-time-date" id="currentDay"></h4>
+              <h4 class="current-time-date" id="currentDateTime"></h4>
+              <p id="weather-description"></p>
+              <br />
+              <h4><strong id="current-temperature"></strong></h4>
+              <br />
+              <p id="feels-like"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row card-container">
+        <div class="col">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h1 class="card-title" id="tomorrow-current-city-text"></h1>
+              <div class="row row align-items-center">
+                <div class="col-6">
+                  <img
+                    src="media/sunshine.jpg"
+                    class="card-img-top"
+                    alt="sunshine"
+                    max
+                    width="200px"
+                  />
+                </div>
+                <div class="col-6">
+                  <h4 class="tomorrow-weather-temperature-precipitation">
+                    Sunny
+                    <br />
+                    <strong>18°C</strong>
+                    <br />
+                    0% chance of rain
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row card-container">
+        <div class="col-3">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title" id="todayPlusTwo">Wednesday</h5>
+              <img
+                src="media/sunshine.jpg"
+                class="card-img-top"
+                alt="sunshine"
+              />
+              <h6 class="weather-temperature-precipitation">
+                Sunny
+                <br />
+                <strong>18°C</strong>
+                <br />
+                0% chance of rain
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">Thursday</h5>
+              <img
+                src="media/sunshine.jpg"
+                class="card-img-top"
+                alt="sunshine"
+              />
+              <h6 class="weather-temperature-precipitation">
+                Sunny
+                <br />
+                <strong>18°C</strong>
+                <br />
+                0% chance of rain
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">Friday</h5>
+              <img
+                src="media/sunshine.jpg"
+                class="card-img-top"
+                alt="sunshine"
+              />
+              <h6 class="weather-temperature-precipitation">
+                Sunny
+                <br />
+                <strong>18°C</strong>
+                <br />
+                0% chance of rain
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h6 class="card-title">Wednesday</h6>
+              <img
+                src="media/sunshine.jpg"
+                class="card-img-top"
+                alt="sunshine"
+              />
+              <h6 class="weather-temperature-precipitation">
+                Sunny
+                <br />
+                <strong>18°C</strong>
+                <br />
+                0% chance of rain
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="src/script.js"></script>
+</html>
