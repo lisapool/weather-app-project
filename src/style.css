@@ -5,6 +5,8 @@ body {
     rgb(255, 175, 207) 49.8%,
     rgb(255, 208, 153) 98.6%
   );
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 h1,
