@@ -52,6 +52,13 @@ h6 {
   margin: 50px 0 30px;
 }
 
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #27296d;
+  display: none;
+}
+
 .card-title {
   color: #27296d;
 }

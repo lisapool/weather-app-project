@@ -34,7 +34,7 @@
             />
           </div>
           <div class="col-3 right-align">
-            <input type="submit" value="Search" class="btn btn-primary" />
+            <input type="submit" value="Search" class="btn btn-primary" onclick="showWeatherCard()"/>
           </div>
         </div>
       </form>
@@ -42,14 +42,14 @@
         <div class="row current-location">
           <div class="col-md-3 offset-md-9">
             <p class="or">or</p>
-          <input type="submit" value="Current location" class="btn btn-primary" />
+          <input type="submit" value="Current location" class="btn btn-primary" onclick="showWeatherCard()"/>
         </div>
         </div>
       </form>
 
-      <div class="row card-container" id="current-weather-card">
+      <div class="row card-container">
         <div class="col">
-          <div class="card" style="width: 100%;">
+          <div class="card" style="width: 100%;" id="current-weather-card">
             <div class="card-body">
               <h1 class="card-title" id="current-city-text"></h1>
               <h4 class="current-time-date" id="currentDay"></h4>

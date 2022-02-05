@@ -69,14 +69,22 @@
   console.log = (response.data.sys.country);
  }
 
+ function showWeatherCard() {
+  let currentWeatherCard = document.querySelector("#current-weather-card");
+  currentWeatherCard.style.display = "block";
+ }
+
+
  
  let searchForm = document.querySelector("#search-form");
      searchForm.addEventListener ("submit", callCity);
      searchForm.addEventListener ("submit", displayTime);
+    
 
   let currentLocation = document.querySelector("#current-location");
   currentLocation.addEventListener ("submit", callCurrentLocation);
   currentLocation.addEventListener ("submit", displayTime);
+ 
 
 
   
