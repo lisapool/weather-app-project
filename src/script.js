@@ -65,7 +65,7 @@
 
   let weatherDescription = (response.data.weather[0].description);
   let displayWeatherDescription = document.querySelector("#weather-description");
-  displayWeatherDescription.innerHTML =  `You can expect ${weatherDescription}`;
+  displayWeatherDescription.innerHTML =  `${weatherDescription}`;
   console.log(weatherDescription);
 
   let feelsLikeTemp = Math.round(response.data.main.feels_like);
