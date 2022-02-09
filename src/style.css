@@ -106,6 +106,7 @@ h6 {
 
 .card-container {
   margin: 50px 0 30px;
+  text-align: center;
 }
 
 .card {
@@ -143,4 +144,10 @@ h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   display: inline;
+}
+
+.temperature {
+  font-size: 70px;
+  font-family: "Lobster", cursive;
+
 }

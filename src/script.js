@@ -13,7 +13,7 @@
      let temperature = Math.round(response.data.main.temp);
      console.log(temperature);
      let currentTemperature = document.querySelector("#current-temperature");
-     currentTemperature.innerHTML = `${temperature}°C`;
+     currentTemperature.innerHTML = `${temperature}`;
      let weatherDescription = (response.data.weather[0].description);
      let displayWeatherDescription = document.querySelector("#weather-description");
      displayWeatherDescription.innerHTML = `${weatherDescription}`;
@@ -61,7 +61,7 @@
   let temperature = Math.round(response.data.main.temp);
   console.log(temperature);
   let currentTemperature = document.querySelector("#current-temperature");
-  currentTemperature.innerHTML = `${temperature}°C`;
+  currentTemperature.innerHTML = `${temperature}`;
 
   let weatherDescription = (response.data.weather[0].description);
   let displayWeatherDescription = document.querySelector("#weather-description");
@@ -70,7 +70,7 @@
 
   let feelsLikeTemp = Math.round(response.data.main.feels_like);
   let displayFeelsLike = document.querySelector("#feels-like");
-  displayFeelsLike.innerHTML = `Feels like ${feelsLikeTemp}°C`;
+  displayFeelsLike.innerHTML = `Feels like ${feelsLikeTemp}`;
   console.log = (response.data.sys.country);
  }
 
