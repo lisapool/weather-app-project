@@ -193,8 +193,8 @@
   
   function displayTime (event){
   event.preventDefault;
-  let currentDateTime = document.querySelector("h4#currentDateTime");
+  let currentDateTime = document.querySelector("#currentDateTime");
   currentDateTime.innerHTML = `| ${currentHour}:${currentMinute} | ${currentDate}/${currentMonth}/${currentYear}`;
-  let displayCurrentDay = document.querySelector("h4#currentDay");
+  let displayCurrentDay = document.querySelector("#currentDay");
   displayCurrentDay.innerHTML = `${currentDay}`;
   }

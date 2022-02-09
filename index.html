@@ -22,43 +22,46 @@
   </head>
   <body>
     <div class="container">
-      <form id="search-form">
+        
         <div class="row top-search">
-          <div class="col-9 left-align">
-            <input
-              type="text"
-              class="form-control"
-              id="current-city"
-              placeholder="Search for a city"
-              autocomplete="off"
-            />
+          <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+            <form id="search-form">
+              <input
+                type="text"
+                class="form-control"
+                id="current-city"
+                placeholder="Search for a city"
+                autocomplete="off"
+              />
           </div>
-          <div class="col-3 right-align">
-            <input type="submit" value="Search" class="btn btn-primary" onclick="showWeatherCard()"/>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 left-align">
+              <input type="submit" value="Search" class="btn btn-primary" onclick="showWeatherCard()"/>
+            </form>
           </div>
         </div>
-      </form>
-      <form id="current-location">
-        <div class="row current-location">
-          <div class="col-3">
-            <p class="or">or</p>
-          <input type="submit" value="Current location" class="btn btn-primary" onclick="showWeatherCard()"/>
-        </div>
-        </div>
-      </form>
+      
+      <div class="row current-location">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 left-align location">
+            <form id="current-location"></form>
+              <input type="submit" value="Current location" class="btn btn-secondary" onclick="showWeatherCard()"/>
+            </form>
+          </div>
+      </div>
+      
+      
+
 
       <div class="row card-container">
         <div class="col">
-          <div class="card" style="width: 100%;" id="current-weather-card">
+          <div class="card" id="current-weather-card">
             <div class="card-body">
-              <h1 class="card-title current-weather" id="current-city-text"></h1>
-              <h4 class="current-time-date" id="currentDay"></h4>
-              <h4 class="current-time-date" id="currentDateTime"></h4>
-              <p class="current-weather-description" id="weather-description"></p>
-              <br />
-              <h4><strong id="current-temperature"></strong></h4>
-              <br />
+              <h1 class="card-title current-weather left-align" id="current-city-text"></h1>
+              <p class="current-time-date left-align" id="currentDay"></p>
+              <p class="current-time-date" id="currentDateTime"></p>
+              
+              <p id="current-temperature"></p>
               <p id="feels-like"></p>
+              <p class="weather-description" id="weather-description"></p>
             </div>
           </div>
         </div>
