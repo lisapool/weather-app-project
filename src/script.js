@@ -8,7 +8,7 @@
      let displayCity = document.querySelector("#current-city-text");
      let tomorrowCurrentCityText = document.querySelector(
       "#tomorrow-current-city-text");
-     displayCity.innerHTML = `Current weather in ${cityName}`;
+     displayCity.innerHTML = `${cityName}`;
      tomorrowCurrentCityText.innerHTML = `Tomorrow's weather in ${cityName}`;
      let temperature = Math.round(response.data.main.temp);
      console.log(temperature);
@@ -55,7 +55,7 @@
 
   let tomorrowCurrentCityText = document.querySelector(
    "#tomorrow-current-city-text");
-  displayCity.innerHTML = `Current weather in ${cityName}`;
+  displayCity.innerHTML = `${cityName}`;
   tomorrowCurrentCityText.innerHTML = `Tomorrow's weather in ${cityName}`;
 
   let temperature = Math.round(response.data.main.temp);

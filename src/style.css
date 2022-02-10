@@ -20,6 +20,7 @@ h6 {
 
 .row {
   --bs-gutter-x: 1rem; 
+  vertical-align: middle;
 }
 
 .col-sm-3 {
@@ -44,12 +45,19 @@ h6 {
 
 .middle-center-align {
   text-align: center;
-  vertical-align: middle;
   
 }
 
 .container {
-  max-width: 800px; 
+  max-width: 600px; 
+}
+
+ul {
+  list-style-type:none;
+  padding-left:0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  display: inline;
 }
 
 .top-search {
@@ -118,11 +126,9 @@ h6 {
 
 .card-title {
   color: #27296d;
+  font-size: 60px;
 }
 
-.current-weather {
-  font-size: 42px;
-}
 
 .weather-description {
   text-transform: capitalize;
@@ -136,18 +142,24 @@ h6 {
   text-align: left;
 }
 
-
-
-
-
 .current-time-date {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   display: inline;
 }
 
-.temperature {
-  font-size: 70px;
+h4.temperature {
+  font-size: 100px;
   font-family: "Lobster", cursive;
+  display: inline;
+  line-height: 170px;
 
 }
+
+.icon {
+  display: block;
+  margin: 0 auto;
+  max-height: 250px;
+}
+
+

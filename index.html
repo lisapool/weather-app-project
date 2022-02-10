@@ -55,13 +55,30 @@
         <div class="col">
           <div class="card" id="current-weather-card">
             <div class="card-body">
-              <h1 class="card-title current-weather" id="current-city-text"></h1>
-              <p class="current-time-date left-align" id="currentDay"></p>
-              <p class="current-time-date" id="currentDateTime"></p>
+                <div class=""row">
+                  <h1 class="card-title" id="current-city-text"></h1>
+                </div>
+                <div class=""row">
+                  <p class="current-time-date left-align" id="currentDay"></p>
+                  <p class="current-time-date" id="currentDateTime"></p>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <img
+                        src="media/sunshine.jpg"
+                        class="icon"
+                        alt="sunshine"
+                      />
+                  </div>
+                  <div class="col-6">
+                    <h4 class="temperature middle-center-align" id="current-temperature"></h4>
+                    <ul class="middle-center-align">
+                      <li id="feels-like"></li>
+                      <li class="weather-description" id="weather-description"></li>
+                    </ul>
+                  </div>
+                </div>
               
-              <p id="current-temperature"></p>
-              <p id="feels-like"></p>
-              <p class="weather-description" id="weather-description"></p>
             </div>
           </div>
         </div>
