@@ -3,7 +3,7 @@
  let apiKey = "03badf8a03b8a5c907ffca283c59bd45";
 
  function displayName(response) {
-     console.log(response.data.name);
+     console.log(response.data);
      let cityName = (response.data.name);
      let displayCity = document.querySelector("#current-city-text");
      let tomorrowCurrentCityText = document.querySelector(
@@ -20,6 +20,12 @@
      let feelsLikeTemp = Math.round(response.data.main.feels_like);
      let displayFeelsLike = document.querySelector("#feels-like");
      displayFeelsLike.innerHTML = `Feels like ${feelsLikeTemp}°C`;
+     let humidity = Math.round(response.data.main.humidity);
+     let displayHumidity = document.querySelector("#humidity");
+     displayHumidity.innerHTML = `Humidity: ${humidity}%`;
+     let wind = Math.round(response.data.wind.speed);
+     let displayWind = document.querySelector("#wind");
+     displayWind.innerHTML = `Wind: ${wind} Km/H`;
  }
  
  function callCity(event) {
@@ -52,26 +58,28 @@
   console.log(response.data.name);
   let cityName = (response.data.name);
   let displayCity = document.querySelector("#current-city-text");
-
   let tomorrowCurrentCityText = document.querySelector(
    "#tomorrow-current-city-text");
   displayCity.innerHTML = `${cityName}`;
   tomorrowCurrentCityText.innerHTML = `Tomorrow's weather in ${cityName}`;
-
   let temperature = Math.round(response.data.main.temp);
   console.log(temperature);
   let currentTemperature = document.querySelector("#current-temperature");
   currentTemperature.innerHTML = `${temperature}`;
-
   let weatherDescription = (response.data.weather[0].description);
   let displayWeatherDescription = document.querySelector("#weather-description");
   displayWeatherDescription.innerHTML =  `${weatherDescription}`;
   console.log(weatherDescription);
-
   let feelsLikeTemp = Math.round(response.data.main.feels_like);
   let displayFeelsLike = document.querySelector("#feels-like");
   displayFeelsLike.innerHTML = `Feels like ${feelsLikeTemp}`;
   console.log = (response.data.sys.country);
+  let humidity = Math.round(response.data.main.humidity);
+  let displayHumidity = document.querySelector("#humidity");
+  displayHumidity.innerHTML = `Humidity: ${humidity}%`;
+  let wind = Math.round(response.data.wind.speed);
+  let displayWind = document.querySelector("#wind");
+  displayWind.innerHTML = `Wind: ${wind} Km/H`;
  }
 
  function showWeatherCard() {

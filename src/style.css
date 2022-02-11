@@ -44,7 +44,7 @@ h6 {
 }
 
 .middle-center-align {
-  text-align: center;
+  text-align: left;
   
 }
 
@@ -56,7 +56,7 @@ ul {
   list-style-type:none;
   padding-left:0;
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   display: inline;
 }
 
@@ -114,7 +114,6 @@ ul {
 
 .card-container {
   margin: 50px 0 30px;
-  text-align: center;
 }
 
 .card {
@@ -127,11 +126,16 @@ ul {
 .card-title {
   color: #27296d;
   font-size: 60px;
+  text-align: center;
 }
 
 
 .weather-description {
   text-transform: capitalize;
+  padding-top:20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  text-align: center;
 }
 
 .card-img-top {
@@ -145,16 +149,22 @@ ul {
 .current-time-date {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  display: inline;
+  text-align: center;
 }
 
 h4.temperature {
   font-size: 100px;
   font-family: "Lobster", cursive;
-  display: inline;
   line-height: 170px;
+  text-align: left;
+  display: inline;
 
 }
+
+p.temperature-units {
+  display: inline;
+}
+
 
 .icon {
   display: block;
