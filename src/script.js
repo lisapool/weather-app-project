@@ -26,6 +26,8 @@
      let wind = Math.round(response.data.wind.speed);
      let displayWind = document.querySelector("#wind");
      displayWind.innerHTML = `Wind: ${wind} Km/H`;
+     let displayIcon = document.querySelector("#icon");
+     displayIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
  }
  
  function callCity(event) {
@@ -80,6 +82,8 @@
   let wind = Math.round(response.data.wind.speed);
   let displayWind = document.querySelector("#wind");
   displayWind.innerHTML = `Wind: ${wind} Km/H`;
+  let displayIcon = document.querySelector("#icon");
+     displayIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
  }
 
  function showWeatherCard() {
