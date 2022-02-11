@@ -132,7 +132,8 @@ ul {
 
 .weather-description {
   text-transform: capitalize;
-  padding-top:20px;
+  margin-top: 0;
+  margin-bottom: 10px;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   text-align: center;
@@ -150,6 +151,8 @@ ul {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   text-align: center;
+  margin-top:10px;
+  margin-bottom: 10px;
 }
 
 h4.temperature {
@@ -163,6 +166,9 @@ h4.temperature {
 
 p.temperature-units {
   display: inline;
+  position: relative;
+  top: -60px;
+  left: 20px;
 }
 
 
