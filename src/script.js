@@ -6,10 +6,7 @@
      console.log(response.data);
      let cityName = (response.data.name);
      let displayCity = document.querySelector("#current-city-text");
-     let tomorrowCurrentCityText = document.querySelector(
-      "#tomorrow-current-city-text");
      displayCity.innerHTML = `${cityName}`;
-     tomorrowCurrentCityText.innerHTML = `Tomorrow's weather in ${cityName}`;
      let temperature = Math.round(response.data.main.temp);
      console.log(temperature);
      let currentTemperature = document.querySelector("#current-temperature");
@@ -28,6 +25,7 @@
      displayWind.innerHTML = `Wind: ${wind} Km/H`;
      let displayIcon = document.querySelector("#icon");
      displayIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+     displayIcon.setAttribute("alt", `${weatherDescription}`);
  }
  
  function callCity(event) {
@@ -60,10 +58,7 @@
   console.log(response.data.name);
   let cityName = (response.data.name);
   let displayCity = document.querySelector("#current-city-text");
-  let tomorrowCurrentCityText = document.querySelector(
-   "#tomorrow-current-city-text");
   displayCity.innerHTML = `${cityName}`;
-  tomorrowCurrentCityText.innerHTML = `Tomorrow's weather in ${cityName}`;
   let temperature = Math.round(response.data.main.temp);
   console.log(temperature);
   let currentTemperature = document.querySelector("#current-temperature");
@@ -84,14 +79,13 @@
   displayWind.innerHTML = `Wind: ${wind} Km/H`;
   let displayIcon = document.querySelector("#icon");
      displayIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+     displayIcon.setAttribute("alt", `${weatherDescription}`);
  }
 
  function showWeatherCard() {
   let currentWeatherCard = document.querySelector("#current-weather-card");
   currentWeatherCard.style.display = "block";
  }
-
-
  
  let searchForm = document.querySelector("#search-form");
      searchForm.addEventListener ("submit", callCity);
