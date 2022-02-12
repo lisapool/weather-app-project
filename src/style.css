@@ -156,9 +156,8 @@ ul {
 }
 
 h4.temperature {
-  font-size: 100px;
+  font-size: 70px;
   font-family: "Lobster", cursive;
-  line-height: 170px;
   text-align: left;
   display: inline;
 
@@ -167,7 +166,7 @@ h4.temperature {
 p.temperature-units {
   display: inline;
   position: relative;
-  top: -60px;
+  top: -40px;
   left: 20px;
 }
 
@@ -175,7 +174,7 @@ p.temperature-units {
 .icon {
   display: block;
   margin: 0 auto;
-  max-height: 250px;
+  min-width: 120px;
 }
 
 

@@ -68,6 +68,16 @@ function showWeatherCard() {
   currentWeatherCard.style.display = "block";
 }
 
+function showFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (4 * 9/5) + 32;
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheit)
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", callCity);
 
