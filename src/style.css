@@ -177,4 +177,16 @@ p.temperature-units {
   min-width: 120px;
 }
 
+.active {
+  cursor: default;
+  color: black;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: black;
+}
+
+
 
