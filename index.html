@@ -48,143 +48,100 @@
       
 
 
-      <div class="row card-container">
-        <div class="col">
-          <div class="card" id="current-weather-card">
-            <div class="card-body">
-                  <h1 class="card-title" id="current-city-text"></h1>
-                  <p class="current-time-date"><span id="currentDay"></span><span id="currentDateTime"></span></p>
-                  <p class="weather-description" id="weather-description"></p>
-                <div class="row">
-                  <div class="col-8">
-                    <img
+      <div class="weather-wrapper" id="current-weather-card">
+          <div class="row">
+            <h1 class="card-title" id="current-city-text"></h1>
+            <p class="current-time-date"><span id="currentDay"></span><span id="currentDateTime"></span></p>
+            <p class="weather-description" id="weather-description"></p>
+          </div>
+          <div class="row">
+          <div class="col-8">
+            <img
                         src="#"
                         class="icon"
                         id="icon"
                         alt="#"
                       />
-                  </div>
-                  <div class="col-4">
+          </div>
+          <div class="col-4">
                     <h4 class="temperature" id="current-temperature"></h4>
                     <p class="temperature-units"> °<a href="#" id="celcius" class="active">C</a> | °<a href="#" id="fahrenheit">F</a>
                     </p>
-                    <ul class="middle-center-align">
+                    <ul>
                       <li id="feels-like"></li>
                       <li id="humidity"></li>
                       <li id="wind"></li>
                     </ul>
-                  </div>
-                </div>
-              
-            </div>
           </div>
-        </div>
-      </div>
+          </div>
+      
 
-      <div class="row card-container">
-        <div class="col">
-          <div class="card" style="width: 100%;">
-            <div class="card-body">
-              <h1 class="card-title" id="tomorrow-current-city-text"></h1>
-              <div class="row row align-items-center">
-                <div class="col-6">
-                  <img
-                    src="media/sunshine.jpg"
-                    class="card-img-top"
-                    alt="sunshine"
-                    max
-                    width="200px"
-                  />
-                </div>
-                <div class="col-6">
-                  <h4 class="tomorrow-weather-temperature-precipitation">
-                    Sunny
-                    <br />
-                    <strong>18°C</strong>
-                    <br />
-                    0% chance of rain
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row card-container">
-        <div class="col-3">
-          <div class="card" style="width: 100%;">
-            <div class="card-body">
-              <h5 class="card-title" id="todayPlusTwo">Wednesday</h5>
+      
+      
+        <div class="row forecast">
+          <div class="col-3">
+              <h5 class="forecast-title" >Wednesday</h5>
               <img
-                src="media/sunshine.jpg"
-                class="card-img-top"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                class="forecast-icon"
                 alt="sunshine"
               />
-              <h6 class="weather-temperature-precipitation">
+              <p class="forecast-description">
                 Sunny
-                <br />
-                <strong>18°C</strong>
-                <br />
-                0% chance of rain
-              </h6>
-            </div>
+              </p>
+              <p class="forecast-temperature">
+                18
+                <a href="#">°C</a> | 
+                <a href="#">°C</a>
+              </p>
           </div>
-        </div>
-        <div class="col-3">
-          <div class="card" style="width: 100%;">
-            <div class="card-body">
-              <h5 class="card-title">Thursday</h5>
-              <img
-                src="media/sunshine.jpg"
-                class="card-img-top"
-                alt="sunshine"
-              />
-              <h6 class="weather-temperature-precipitation">
-                Sunny
-                <br />
-                <strong>18°C</strong>
-                <br />
-                0% chance of rain
-              </h6>
-            </div>
+          <div class="col-3">
+            <h5 class="forecast-title" >Wednesday</h5>
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              class="forecast-icon"
+              alt="sunshine"
+            />
+            <p class="forecast-description">
+              Sunny
+            </p>
+            <p class="forecast-temperature">
+              18
+              <a href="#">°C</a> | 
+              <a href="#">°C</a>
+            </p>
           </div>
-        </div>
-        <div class="col-3">
-          <div class="card" style="width: 100%;">
-            <div class="card-body">
-              <h5 class="card-title">Friday</h5>
-              <img
-                src="media/sunshine.jpg"
-                class="card-img-top"
-                alt="sunshine"
-              />
-              <h6 class="weather-temperature-precipitation">
-                Sunny
-                <br />
-                <strong>18°C</strong>
-                <br />
-                0% chance of rain
-              </h6>
-            </div>
+          <div class="col-3">
+            <h5 class="forecast-title" >Wednesday</h5>
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              class="forecast-icon"
+              alt="sunshine"
+            />
+            <p class="forecast-description">
+              Sunny
+            </p>
+            <p class="forecast-temperature">
+              18
+              <a href="#">°C</a> | 
+              <a href="#">°C</a>
+            </p>
           </div>
-        </div>
-        <div class="col-3">
-          <div class="card" style="width: 100%;">
-            <div class="card-body">
-              <h6 class="card-title">Wednesday</h6>
-              <img
-                src="media/sunshine.jpg"
-                class="card-img-top"
-                alt="sunshine"
-              />
-              <h6 class="weather-temperature-precipitation">
-                Sunny
-                <br />
-                <strong>18°C</strong>
-                <br />
-                0% chance of rain
-              </h6>
-            </div>
+          <div class="col-3">
+            <h5 class="forecast-title" >Wednesday</h5>
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              class="forecast-icon"
+              alt="sunshine"
+            />
+            <p class="forecast-description">
+              Sunny
+            </p>
+            <p class="forecast-temperature">
+              18
+              <a href="#">°C</a> | 
+              <a href="#">°C</a>
+            </p>
           </div>
         </div>
       </div>

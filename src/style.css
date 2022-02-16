@@ -18,34 +18,13 @@ h6 {
   font-family: "Lobster", cursive;
 }
 
-.row {
-  --bs-gutter-x: 1rem; 
-  vertical-align: middle;
-}
-
-.col-sm-3 {
-  margin-top: 15px;
-}
-
-.col-sm-9 {
-  margin-top: 15px;
-}
-
-.left-align {
-  text-align: left;
-}
-
-.right-align {
-  text-align: right;
+.row>* {
+  padding-left:0;
+  padding-right:0;
 }
 
 .location {
   padding-left: 0;
-}
-
-.middle-center-align {
-  text-align: left;
-  
 }
 
 .container {
@@ -59,6 +38,7 @@ ul {
   font-size: 14px;
   display: inline;
 }
+
 
 .top-search {
   margin: 100px auto 10px;
@@ -75,10 +55,8 @@ ul {
 }
 
 .current-location {
-  margin: 10px auto 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 20px;
+  margin: 20px auto 10px;
+ 
 }
 
 .btn-primary {
@@ -102,8 +80,8 @@ ul {
   border-width: 2px;
   color: #27296d;
   width: 70%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .btn-secondary:hover,
@@ -112,15 +90,19 @@ ul {
   color: #27296d;
 }
 
-.card-container {
-  margin: 50px 0 30px;
-}
-
-.card {
+.weather-wrapper {
   background-color: #fff;
   border-radius: 10px;
   border: 2px solid #27296d;
   display: none;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.forecast {
+  padding:10px;
+  margin-top: 30px;
+  text-align: center;
 }
 
 .card-title {
