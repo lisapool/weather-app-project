@@ -5,11 +5,9 @@
 let apiKey = "03badf8a03b8a5c907ffca283c59bd45";
 
 function displayName(response) {
-  console.log(response.data);
   let cityName = response.data.name;
   let displayCity = document.querySelector("#current-city-text");
   displayCity.innerHTML = `${cityName}`;
-  
   celciusTemperature = response.data.main.temp;
   let temperature = Math.round(celciusTemperature);
   let currentTemperature = document.querySelector("#current-temperature");
@@ -35,6 +33,40 @@ function displayName(response) {
   );
   displayIcon.setAttribute("alt", `${weatherDescription}`);
   showWeatherCard();
+  getForecast(response.data.coord);
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
+  console.log(apiURL);
+  axios.get(apiURL).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data.daily);
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["Saturday", "Sunday", "Monday", "Tuesday"];
+  days.forEach(function(day) {
+  forecastHTML = forecastHTML + `
+  <div class="col-3">
+              <h5 class="forecast-title" >${day}</h5>
+              <img
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                class="forecast-icon"
+                alt="sunshine"
+              />
+              <p class="forecast-description">
+                Sunny
+              </p>
+              <p class="forecast-temperature">
+                18°C  18°C
+              </p>
+          </div>
+  `;
+  });
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function callCity(event) {
@@ -64,35 +96,9 @@ function showLocation(position) {
   axios.get(`${locationApi}`).then(displayName);
 }
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = "";
-  let days = ["Saturday", "Sunday", "Monday", "Tuesday"];
-  days.forEach(function(day) {
-  forecastHTML = forecastHTML + `
-  <div class="col-3">
-              <h5 class="forecast-title" >${day}</h5>
-              <img
-                src="http://openweathermap.org/img/wn/10d@2x.png"
-                class="forecast-icon"
-                alt="sunshine"
-              />
-              <p class="forecast-description">
-                Sunny
-              </p>
-              <p class="forecast-temperature">
-                18°C  18°C
-              </p>
-          </div>
-  `;
-  });
-  forecastElement.innerHTML = forecastHTML;
-}
-
 function showWeatherCard() {
   let currentWeatherCard = document.querySelector("#current-weather-card");
   currentWeatherCard.style.display = "block";
-  displayForecast();
 }
 
 function showFahrenheit(event) {
