@@ -64,9 +64,35 @@ function showLocation(position) {
   axios.get(`${locationApi}`).then(displayName);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["Saturday", "Sunday", "Monday", "Tuesday"];
+  days.forEach(function(day) {
+  forecastHTML = forecastHTML + `
+  <div class="col-3">
+              <h5 class="forecast-title" >${day}</h5>
+              <img
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                class="forecast-icon"
+                alt="sunshine"
+              />
+              <p class="forecast-description">
+                Sunny
+              </p>
+              <p class="forecast-temperature">
+                18°C  18°C
+              </p>
+          </div>
+  `;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showWeatherCard() {
   let currentWeatherCard = document.querySelector("#current-weather-card");
   currentWeatherCard.style.display = "block";
+  displayForecast();
 }
 
 function showFahrenheit(event) {
