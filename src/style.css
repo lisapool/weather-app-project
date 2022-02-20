@@ -39,6 +39,13 @@ ul {
   display: inline;
 }
 
+p.footer {
+  margin-top: 30px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+
+}
+
 
 .top-search {
   margin: 100px auto 10px;
@@ -95,7 +102,7 @@ ul {
   border-radius: 10px;
   border: 2px solid #27296d;
   display: none;
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 10px;
 }
 
