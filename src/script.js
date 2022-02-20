@@ -220,30 +220,6 @@ function showWeatherCard() {
   currentWeatherCard.style.display = "block";
 }
 
-function showFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celciusTemperature * 9/5) + 32;
-  let temperatureElement = document.querySelector("#current-temperature");
-  celciusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function showCelcius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temperature");
-  celciusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-}
-
-let celciusTemperature = null; 
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", showFahrenheit)
-
-let celciusLink = document.querySelector("#celcius");
-celciusLink.addEventListener("click", showCelcius)
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", callCity);
