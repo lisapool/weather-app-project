@@ -126,7 +126,7 @@ function displayName(response) {
   displayWeatherDescription.innerHTML = `${weatherDescription}`;
   let feelsLikeTemp = Math.round(response.data.main.feels_like);
   let displayFeelsLike = document.querySelector("#feels-like");
-  displayFeelsLike.innerHTML = `Feels like ${feelsLikeTemp}°C`;
+  displayFeelsLike.innerHTML = `Feels like: ${feelsLikeTemp}°`;
   let humidity = Math.round(response.data.main.humidity);
   let displayHumidity = document.querySelector("#humidity");
   displayHumidity.innerHTML = `Humidity: ${humidity}%`;

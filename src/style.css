@@ -105,7 +105,6 @@ ul {
   text-align: center;
 }
 
-
 .card-title {
   color: #27296d;
   font-size: 60px;
@@ -114,6 +113,11 @@ ul {
 
 .forecast-description {
   text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
 }
 
 .weather-description {
