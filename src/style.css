@@ -112,6 +112,9 @@ ul {
   text-align: center;
 }
 
+.forecast-description {
+  text-transform: capitalize;
+}
 
 .weather-description {
   text-transform: capitalize;
